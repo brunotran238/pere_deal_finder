@@ -1,0 +1,35 @@
+{
+  "criteria": {
+    "yield_proxy": {
+      "description": "NOI / Purchase Price",
+      "weight": 0.30,
+      "direction": "higher_is_better"
+    },
+    "rent_gap": {
+      "description": "Difference between market_rent_psm and in_place_rent_psm",
+      "weight": 0.25,
+      "direction": "higher_is_better"
+    },
+    "occupancy": {
+      "description": "Current occupancy rate of the asset",
+      "weight": 0.20,
+      "direction": "higher_is_better"
+    },
+    "growth_signals": {
+      "description": "Market/demographic/policy validation",
+      "weight": 0.15,
+      "direction": "higher_is_better"
+    },
+    "asset_type_fit": {
+      "description": "Fit with PERE investment strategy",
+      "weight": 0.10,
+      "direction": "category_preference"
+    }
+  },
+  "asset_type_weights": {
+    "Industrial": 1.0,
+    "Office": 0.9,
+    "Residential": 0.7,
+    "Retail": 0.6
+  }
+}
