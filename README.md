@@ -5,9 +5,9 @@ This project uses CrewAI to automatically analyze real estate properties, score 
 ## Overview
 
 The system employs three AI agents working sequentially:
-1. **Deal Scoring Analyst** - Scores properties and selects top 12 assets
-2. **Signals Researcher** - Validates assets with market data and citations
-3. **Memo Writer** - Creates concise investment summaries
+1. **Deal Scoring Analyst** -    Scores all properties and selects the top 12 investment opportunities.
+2. **Signals Researcher** - Gathers citations, news, and reports to validate each selected asset
+3. **Memo Writer** - Produces a 2-3 sentences investment memo per asset based on research findings.
 
 ## Prerequisites
 
@@ -25,11 +25,14 @@ pip install crewai-tools
 
 ```
 project/
-├── main.py                      # Main execution file
-├── seed_properties.csv          # Property dataset (input)
-├── criteria_pere.md            # Evaluation framework (input)
-├── scoring_template_pere.json  # Scoring logic (input)
-└── top_12_assets.json          # Generated output file
+├── main.py                       # Main execution file
+├── seed_properties.csv           # Property dataset (input)
+├── criteria_pere.md              # Evaluation framework (input)
+├── scoring_template_pere.json    # Scoring logic (input)
+├── top_assets.json               # Generated output file
+├── top_assets_url.json           # Generated output file
+└── investment_memos.md           # Generated output file
+
 ```
 
 ## Input Files
@@ -38,15 +41,15 @@ project/
 Contains the property dataset with columns for property details that will be analyzed and scored.
 
 ### 2. criteria_pere.md
-Defines the evaluation framework and criteria used to assess each property.
+Markdown document describing how to evaluate deals (qualitative guidance).
 
 ### 3. scoring_template_pere.json
-Contains the specific scoring logic and weights applied to different property attributes.
+JSON with scoring weights and attribute importance (quantitative logic).
 
 ## Setup Instructions
 
 ### 1. Set API Keys
-Before running, you need to set your API keys in the environment or directly in the code:
+Before running, you need to set your API keys in the environment or directly in the `main.py`:
 
 ```python
 os.environ["OPENAI_API_KEY"] = "your-openai-api-key-here"
@@ -56,7 +59,7 @@ os.environ["SERPER_API_KEY"] = "your-serper-api-key-here"
 **Note**: The current code has hardcoded API keys which should be replaced with your own keys or environment variables for security.
 
 ### 2. Ensure Input Files Exist
-Make sure these files are in the same directory as `test.py`:
+Make sure these files are in the same directory as `main.py`:
 - `seed_properties.csv`
 - `criteria_pere.md`
 - `scoring_template_pere.json`
@@ -73,49 +76,39 @@ python main.py
 ### Stage 1: Property Scoring
 - Reads all properties from `seed_properties.csv`
 - Applies scoring framework from `criteria_pere.md` and `scoring_template_pere.json`
-- Ranks properties and selects top 12
-- Creates `top_12_assets.json` with initial structure
+- Score each asset (0-10) and select top 12
+- Write result to `top_assets.json`
 
 ### Stage 2: Signal Validation
-- Searches for market signals and citations for each of the top 12 assets
-- Updates the `signals` array in `top_12_assets.json`
-- Each signal includes: source, URL, and summary
+- Performs web search via Serper API for 12 assets
+- Gathers 2+ citations (URL, source, summary)
+- Write result to `top_assets_url.json`
 
 ### Stage 3: Memo Generation
 - Writes 2-3 sentence investment memos for each asset
-- Updates the `memo` field in `top_12_assets.json`
-- Summarizes why each property is promising
+- Write result to investment_memos.md
 
 ## Output Format
 
-The final `top_12_assets.json` follows this schema:
+The final `top_assets.json` follows this schema:
 
 ```json
 [
   {
-    "id": "unique property identifier from CSV",
-    "name": "property name",
-    "location": "city, state",
-    "score": 85,
-    "justification": "1-2 sentence explanation of the score",
-    "signals": [
-      {
-        "source": "Market data source",
-        "url": "https://example.com",
-        "summary": "Supporting market information"
-      }
-    ],
-    "memo": "2-3 sentence investment summary"
-  }
+    "id": "AUS-001", 
+    "name": "Retail (Neighbourhood) Western Sydney Sydney", 
+    "score": 7.53, 
+    "reason": "Good yield and strong rent gap with moderate stability"}
 ]
 ```
 
 ## Key Features
 
-- **Automated Scoring**: Uses AI to apply complex scoring criteria consistently
-- **Market Validation**: Searches for real market signals to validate recommendations
-- **Investment Memos**: Generates concise, actionable investment summaries
-- **Structured Output**: Produces machine-readable JSON for further analysis
+- **Agent Collaboration**: Built with CrewAI’s agent-task framework
+- **Quantitative Scoring**: Uses structured criteria and weights
+- **Live Signal Research**: Pulls real-time references from the web
+- **Memo Generation**: Produces markdown memos suitable for investor decks
+- **Modular Design**: Easy to adapt to other asset classes
 
 ## Troubleshooting
 
