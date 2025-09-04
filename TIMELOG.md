@@ -31,7 +31,7 @@
   - API integrations
 
 ### Debugging & Testing
-- **Duration**: 2-3 hours (ongoing)
+- **Duration**: 3-5 hours (ongoing)
 - **Activities**:
   - System testing
   - Bug fixes and troubleshooting
