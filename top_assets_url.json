@@ -1,0 +1,144 @@
+{
+  "top_assets": [
+    {
+      "id": "AUS-001",
+      "name": "Retail (Neighbourhood) Western Sydney Sydney",
+      "references": [
+        {
+          "url": "https://www.shoppingcentrenews.com.au/feature-stories/special-feature/revelop-a-community-first-approach-to-retail-transformation/",
+          "summary": "Revelop is developing a landmark retail-led precinct in Dural, showcasing significant investment in Western Sydney's retail sector."
+        },
+        {
+          "url": "https://www.savills.com.au/blog/article/220625/australia-articles/the-shift-west--why-cbd-based-retailers-are-eyeing-western-sydney.aspx",
+          "summary": "Growing demand for retail space in Western Sydney has led CBD-based retailers to explore opportunities in the area, indicating robust market potential."
+        }
+      ]
+    },
+    {
+      "id": "AUS-002",
+      "name": "Office Northern Corridor Perth",
+      "references": [
+        {
+          "url": "https://www.cushmanwakefield.com/en/australia/news/2023/03/tenants-seek-prime-location-in-perth-northern-corridor",
+          "summary": "Demand for office space in Perth's Northern Corridor is driven by tenants seeking prime locations, signaling strong market interest."
+        },
+        {
+          "url": "https://www.wa.gov.au/government/media-statements/Cook%20Labor%20Government/More-industrial-land-released-in-Perth's-northern-corridor-20241211",
+          "summary": "The release of more industrial land is expected to enhance business activity and real estate demand in Perth's Northern Corridor."
+        }
+      ]
+    },
+    {
+      "id": "AUS-003",
+      "name": "Retail (Neighbourhood) CBD Fringe Sydney",
+      "references": [
+        {
+          "url": "https://raywhitecommercialsydneycityfringe.com/news/glebe-commercial-property-market-why-it-bucks-the-trends",
+          "summary": "The Glebe retail market in Sydney's city fringe shows resilience, with limited supply and lower vacancy rates benefiting investors and tenants."
+        },
+        {
+          "url": "https://www.savills.com.au/insight-and-opinion/savills-news/175948/the-rebirth-of-the-sydney-city-fringe-market",
+          "summary": "Investors and tenants are increasingly drawn to Sydney's city fringe suburbs due to their revitalization and appealing commercial opportunities."
+        }
+      ]
+    },
+    {
+      "id": "AUS-004",
+      "name": "Office CBD Fringe Sydney",
+      "references": [
+        {
+          "url": "https://www.savills.com.au/insight-and-opinion/savills-news/175948/the-rebirth-of-the-sydney-city-fringe-market",
+          "summary": "The Sydney City Fringe market is gaining traction, attracting investors and tenants looking for better opportunities outside the CBD."
+        },
+        {
+          "url": "https://www.commercialrealestate.com.au/news/cbd-v-fringe-the-changing-office-landscape-1278146/",
+          "summary": "As office vacancies rise, demand dynamics are shifting, indicating changes in tenant preferences towards fringe areas and their potential."
+        }
+      ]
+    },
+    {
+      "id": "AUS-005",
+      "name": "Retail (Neighbourhood) South Adelaide",
+      "references": [
+        {
+          "url": "https://www.jll.com/en-au/insights/market-dynamics/adelaide-retail",
+          "summary": "The Adelaide retail market remains stable, with sustained demand for retail space, positively impacting areas like South Adelaide."
+        },
+        {
+          "url": "https://www.aedasa.com.au/business/investing-in-adelaide/investment-opportunities/retail/",
+          "summary": "Adelaide's retail sector is experiencing growth, with an expansion of market offerings and increasing interest from food and beverage operators."
+        }
+      ]
+    },
+    {
+      "id": "AUS-006",
+      "name": "Office Northern Corridor Perth",
+      "references": [
+        {
+          "url": "https://www.cushmanwakefield.com/en/australia/news/2023/03/tenants-seek-prime-location-in-perth-northern-corridor",
+          "summary": "Demand for office space in Perth's Northern Corridor is driven by tenants seeking prime locations, signaling strong market interest."
+        },
+        {
+          "url": "https://www.wa.gov.au/government/media-statements/Cook%20Labor%20Government/More-industrial-land-released-in-Perth's-northern-corridor-20241211",
+          "summary": "The release of more industrial land is expected to enhance business activity and real estate demand in Perth's Northern Corridor."
+        }
+      ]
+    },
+    {
+      "id": "AUS-007",
+      "name": "Retail (Neighbourhood) Airport Precinct Melbourne",
+      "references": [
+        {
+          "url": "https://travelweekly.com.au/melbourne-airport-unveils-plans-for-major-entertainment-leisure-and-retail-precinct/",
+          "summary": "Melbourne Airport's Elite Park development will enhance the retail and leisure options available, integrating them into the airport experience."
+        },
+        {
+          "url": "https://karryon.com.au/industry-news/destination/mel-airport-elite-park/",
+          "summary": "The upcoming Elite Park at Melbourne Airport will provide diverse retail experiences, creating a vibrant community hub."
+        }
+      ]
+    },
+    {
+      "id": "AUS-008",
+      "name": "Industrial Airport Precinct Melbourne",
+      "references": [
+        {
+          "url": "https://www.savills.com.au/insight-and-opinion/savills-news/159200/land-values-in-melbourne-s-east--south-east-industrial-precincts-skyrocket",
+          "summary": "Recent trends show a significant increase in land values in Melbourne’s industrial precincts, driven by demand for space in areas close to the airport."
+        },
+        {
+          "url": "https://www.newsfilecorp.com/release/243081/Stacked-Farm-Announces-First-LargeScale-Vertical-Farm-in-Melbourne-Airport-Precinct",
+          "summary": "A new $150 million vertical farm is set to be developed in the Melbourne Airport Precinct, showcasing innovation and economic potential in the area."
+        }
+      ]
+    },
+    {
+      "id": "AUS-009",
+      "name": "Office Parramatta Sydney",
+      "references": [
+        {
+          "url": "https://www.afr.com/companies/infrastructure/parramatta-boldly-stakes-its-claim-as-sydney-s-second-cbd-20250612-p5m70c",
+          "summary": "Parramatta is positioning itself as Sydney's second CBD, attracting major companies and new office developments to the area."
+        },
+        {
+          "url": "https://www.propertycouncil.com.au/media-releases/parramatta-office-market-positive-signs-amid-mixed-performance",
+          "summary": "The Parramatta office market shows signs of resilience, with a slight increase in activity despite rising vacancy rates due to new supply."
+        }
+      ]
+    },
+    {
+      "id": "AUS-010",
+      "name": "Retail (Neighbourhood) Airport Precinct Melbourne",
+      "references": [
+        {
+          "url": "https://travelweekly.com.au/melbourne-airport-unveils-plans-for-major-entertainment-leisure-and-retail-precinct/",
+          "summary": "Melbourne Airport's Elite Park development will enhance the retail and leisure options available, integrating them into the airport experience."
+        },
+        {
+          "url": "https://karryon.com.au/industry-news/destination/mel-airport-elite-park/",
+          "summary": "The upcoming Elite Park at Melbourne Airport will provide diverse retail experiences, creating a vibrant community hub."
+        }
+      ]
+    }
+  ]
+}
