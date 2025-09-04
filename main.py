@@ -3,7 +3,7 @@ from crewai import Agent, Task, Crew, Process
 from crewai_tools import SerperDevTool, CSVSearchTool, FileReadTool, JSONSearchTool
 
 # 🔑 Set your API keys
-os.environ["OPENAI_API_KEY"] = "your-openai-api-key"
+os.environ["OPENAI_API_KEY"] = "your-open-api-key"
 os.environ["SERPER_API_KEY"] = "your-serper-api-key"
 
 # --- TOOLS ---
@@ -42,7 +42,8 @@ deal_scoring_analyst = Agent(
 signals_researcher = Agent(
     role="Signals Researcher",
     goal="Validate the top 12 assets by finding citations, references, and market signals.",
-    backstory="You are a deep-dive researcher who validates deals with market data.",
+    backstory="You are a deep-dive researcher who validates deals with market data."
+            "You use cutting-edge tools to track real estate activity, news, and economic indicators to uncover opportunities before others do",
     tools=[search_tool, top_assets_tool],
     verbose=True,
     memory=True,
@@ -95,10 +96,14 @@ validate_signals = Task(
     description=(
         "Read 'top_12_assets.json'. For each asset, search for citations, references, "
         "and supporting market signals that validate its attractiveness. Add them to "
-        "the 'signals' array of each asset object. Each signal must have: "
-        "{source, url, summary}."
+        "the 'signals' array of each asset object."
+        "For each signal, you MUST include:\n"
+        "- A 2-3 sentence summary of the signal\n"
+        "- A direct source URL where the information was found\n"
+        "- The article title or headline if available"
     ),
-    expected_output="An updated 'top_12_assets.json' file with 'signals' filled for each asset.",
+    expected_output="An updated 'top_12_assets.json' file with 'signals' filled for each asset."
+                    "Each signal must include a summary, a clickable URL source, and a title.",
     tools=[search_tool, top_assets_tool],
     agent=signals_researcher,
     output_file="top_12_assets.json",
@@ -107,7 +112,7 @@ validate_signals = Task(
 write_memos = Task(
     description=(
         "Read 'top_12_assets.json'. For each asset, write a short 2–3 sentence memo "
-        "summarizing why it is promising, based on its score and signals. "
+        "summarising why it is promising, based on its score and signals. "
         "Write the text into the 'memo' field of each asset object. "
     ),
     expected_output="An updated 'top_12_assets.json' file with memos filled for each asset.",
